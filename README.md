@@ -33,13 +33,13 @@ The following pipeline should be used to correctly regenerate all datasets and m
 - The original CICIDS2017 dataset was developed by the Canadian Institute of Cybersecurity (CIC) to support the training and evaluation of machine learning models for intrusion detection, https://www.unb.ca/cic/datasets/ids-2017.html.
 - The processed version (cicids2017_cleaned.csv) used in this project was prepared by Eric Anacleto Ribeiro, https://www.kaggle.com/ericanacletoribeiro.
   
-# Versions of critical software libraries used
-Python version 3.12.11
-TensorFlow/TFLite version 2.19.0
-Scikit-learn version 1.6.1
-NumPy version 2.0.2
-Imbalanced-learn version 0.14.0
-psutil 5.9.5
+# Versions of critical software used
+- Python version 3.12.11
+- TensorFlow/TFLite version 2.19.0
+- Scikit-learn version 1.6.1
+- NumPy version 2.0.2
+- Imbalanced-learn version 0.14.0
+- psutil 5.9.5
 
 # Source code table of contents:
 ```text
