@@ -7,11 +7,11 @@ Low-resource networks, such as Internet of Things networks, face continuously ev
 The investigation is guided by these research questions:
 1. Can a PCA-CNN or AE-MLP IDS achieve higher resource efficiency than a baseline 1D-CNN IDS, while maintaining comparable or superior performance in a resource-constrained environment?
 2. Can a quantised version of a PCA-CNN or AE-MLP IDS achieve higher resource efficiency than a quantised version of the 1D-CNN IDS baseline, while maintaining comparable or superior performance in a resource-constrained environment?
-3. Can PCA-CNN or AE-MLP IDS generalise to unseen data more effectively than a baseline 1D-CNN?
+3. Can PCA-CNN or AE-MLP IDS generalise to unseen attacks more effectively than a baseline 1D-CNN?
 
 # Usage
 To run the experimental code without regenerating the datasets:
-1. The full project folder can be found at https://drive.google.com/drive/folders/1xw92oMqQRnlDOngFd13FPXQa9J8mIBgh?usp=share_link 
+1. The full project folder containing the datasets and models can be found at https://drive.google.com/drive/folders/1xw92oMqQRnlDOngFd13FPXQa9J8mIBgh?usp=share_link 
 1. Open the Jupyter notebooks in Google Colab, which includes all the required libraries pre-installed.
 2. Run all programmes in a Python 3 runtime environment using the T4 GPU. The resource usage experiment files are an exception and must be run on the Google Colab CPU to ensure accurate resource usage measurements.
 3. For most programmes, you only need to update the file paths so that they point to the correct dataset and model locations, then click ‘Run all’ in Colab. Any additional instructions specific to certain programmes are included within their respective files.
