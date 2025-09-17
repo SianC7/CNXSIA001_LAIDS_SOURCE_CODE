@@ -44,7 +44,7 @@ Follow the steps below to regenerate all datasets and models required to re-run 
 - Imbalanced-learn version 0.14.0
 - psutil 5.9.5
 
-# Source code table of contents:
+# Table of contents of source code in Google Drive folder:
 ```text
 CNXSIA001_LAIDS_SOURCE_CODE/
 ├── MODEL_DATA_PREPROCESSING.ipynb
