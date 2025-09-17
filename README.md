@@ -2,7 +2,7 @@
 # LAIDS: Lightweight AI-based Intrusion Detection Systems for Resource-Constrained Networks
 
 # Project Overview
-Low-resource networks, such as IoT, face continuously evolving and sophisticated threats. Traditional Intrusion Detection Systems (IDSs) have become inefficient, and AI-based approaches are often impractical due to their high computational demands. Thus there is a critical gap: the absence of lightweight AI-based IDSs that deliver high detection accuracy while remaining feasible for deployment in resource-constrained networks. This project aims to address this gap by designing and evaluating lightweight AI-IDS models that balance strong detection capabilities with low resource usage. Three core model architectures are explored: a baseline CNN, a PCA-CNN and an AE-MLP, which are trained and evaluated with the CICIDS2017 dataset. These models, along with their quantised variants, are evaluated on their classification performance, resource efficiency and their ability to generalise to ’zero-day attacks’.
+Low-resource networks, such as Internet of Things networks, face continuously evolving, sophisticated threats. Traditional Intrusion Detection Systems (IDSs) have become inefficient, and AI-based approaches are often impractical due to their high computational demands. Thus there is a critical gap: the absence of lightweight AI-based IDSs that deliver high detection accuracy while remaining feasible for deployment in resource-constrained networks. This project aims to address this gap by designing and evaluating lightweight AI-IDS models that balance strong detection capabilities with low resource usage. Three core model architectures are explored: a baseline CNN, a PCA-CNN and an AE-MLP, which are trained and evaluated with the CICIDS2017 dataset. These models, along with their quantised variants, are evaluated on their classification performance, resource efficiency and their ability to generalise to ’zero-day attacks’.
 
 The investigation is guided by these research questions:
 1. Can a PCA-CNN or AE-MLP IDS achieve higher resource efficiency than a baseline 1D-CNN IDS, while maintaining comparable or superior performance in a resource-constrained environment?
@@ -11,8 +11,8 @@ The investigation is guided by these research questions:
 
 # Usage
 To run the experiment code without regenerating the datasets:
-1. Upload the project files to Google Drive and open them in Google Colab, which comes with all necessary libraries pre-installed.
-2. All programs are to be run in a Python 3 runtime environment, using the T4 GPU. The resource usage experiment files are an exception as they must be run using the Google Colab CPU for accruate resource usage estimations.
+1. Upload the all files to Google Drive and open them in Google Colab, which comes with all necessary libraries pre-installed.
+2. All programs are to be run in a Python 3 runtime environment, using the T4 GPU. The resource usage experiment files are an exception as they must be run using the Google Colab CPU for accurate resource usage estimations.
 3. For most programs, one only needs to update the file paths to point to the locations of the specific datasets and models used in the program, then press 'Run all' in Colab. Extra instructions to run certain programs can be seen in their files.
 
 # Experiment Pipline
@@ -21,15 +21,15 @@ The following pipeline should be used to correctly regenerate all datasets and m
    - Run the MODEL_DATA_PREPROCESSING.ipynb notebook using the cleaned CICIDS2017 dataset (cicids2017_cleaned.csv) available on Kaggle at https://www.kaggle.com/datasets/ericanacletoribeiro/cicids2017-cleaned-and-preprocessed.
    - Make sure the file paths in the notebook point to the desired locations for saving the processed datasets.
 2. FP32 Model Training:
-   - Once datasets are generated, run the FP32 model notebooks (e.g. FP32_PCA_1DCNN_Model.ipynb) to train and save the FP32 version of each model.
+   - Once the datasets are generated, run the FP32 model notebooks (e.g. FP32_PCA_1DCNN_Model.ipynb) to train and save the FP32 version of each model.
    - Note: the Baseline 1D-CNN FP32 and quantised models are generated and tested in a single file.
 3. Quantised Model Generation & Experiment:
-   - Execute the experiment 2 quantisation notebooks to generate the FP32, FP16, Dynamic INT8, and Full INT8 TFLite models for each trained TensorFlow FP32 model (e.g. Experiment_2_Quant_PCA_CNN_Models.ipynb).
+   - Execute the experiment 2, quantisation, notebooks to generate the FP32, FP16, Dynamic INT8, and Full INT8 TFLite models for each trained TensorFlow FP32 model (e.g. Experiment_2_Quant_PCA_CNN_Models.ipynb).
 4. Resource Usage and Generalization Experiments:
    - The resource measurement and generalization experiment notebooks can now be run to estimate the TF and TFLite models' resource usage and evaluate their ability to detect unseen attacks.
 
 # Acknowledgements
-- The baseline 1D CNN model used in project was developed with the help of Claire Campbell and Christopher Blignaut.
+- The baseline 1D CNN model used in the project was developed in collaboration with Claire Campbell, clair3campb3ll, and Christopher Blignaut.
 - The original CICIDS2017 dataset was developed by the Canadian Institute of Cybersecurity (CIC) to support the training and evaluation of machine learning models for intrusion detection, https://www.unb.ca/cic/datasets/ids-2017.html.
 - The processed version (cicids2017_cleaned.csv) used in this project was prepared by Eric Anacleto Ribeiro, https://www.kaggle.com/ericanacletoribeiro.
   
